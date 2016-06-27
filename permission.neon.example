@@ -1,0 +1,21 @@
+roles:
+	guest:
+		title: Permission.roles.guest
+	admin:
+		title: Permission.roles.admin
+	employee:
+		title: Permission.roles.employee
+		parent: guest
+
+resources:
+	- orders
+	- commissions
+
+permissions:
+	employee:
+		orders:
+			deliver: Yes
+			undeliver: Yes
+
+		commissions:
+			list: No

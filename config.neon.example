@@ -1,0 +1,20 @@
+services:
+	authorizator: Matyx\Authorizators\Authorizator
+
+extensions:
+	console: Kdyby\Console\DI\ConsoleExtension
+	translation: Kdyby\Translation\DI\TranslationExtension
+	events: Kdyby\Events\DI\EventsExtension
+
+
+translation:
+	default: cs
+	fallback: [cs_CZ, cs]
+
+includes:
+	- database.neon
+
+console:
+	url: xxx
+	commands:
+		- Matyx\Console\UpdatePermissions
